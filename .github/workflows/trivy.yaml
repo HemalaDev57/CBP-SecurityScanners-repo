@@ -3,7 +3,7 @@ name: Trivy Hybrid Scan
 on:
   push:
     branches:
-      - oidc-2
+      - main
 
 jobs:
   trivy-hybrid-scan:
@@ -42,4 +42,4 @@ jobs:
         uses: cloudbees-io-gha/trivy-scan-publish@v2
         with:
           binary-tar-path: output.tar
-          cloudbees-url: "https://api.saas-qa.beescloud.com"
+          cloudbees-url: "https://api.saas-preprod.beescloud.com"
